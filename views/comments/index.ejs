@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comment list</h1>
+    <ul>
+        <% for (const comment of comments) { %>
+            <li><%= comment.comment %></li>
+            <a href="/comments/<%= comment.id %>">detail</a>
+            <a href="/comments/<%= comment.id %>/edit">jump to edit</a>
+        <%} %>
+    </ul>
+    <a href="/comments/new">jump to new</a>
+    
+</body>
+</html>
